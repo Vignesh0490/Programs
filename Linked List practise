@@ -1,0 +1,70 @@
+import java.util.LinkedList;
+
+public class LinkedListEx
+{
+public static void main(String[] args)
+{
+LinkedList<String> list = new LinkedList<String>();
+
+//Adding elements at the end of the list
+
+list.add("ONE");
+
+list.add("TWO");
+
+list.add("THREE");
+
+list.add("FOUR");
+
+list.add("FIVE");
+
+list.add("SIX");
+
+list.add("SEVEN");
+
+list.add("Eight");
+
+//Printing the elements of list
+
+System.out.println(list);
+
+//Removing the elements from the head of the LinkedList
+
+list.pollFirst();
+//Printing the elements of list
+
+System.out.println(list);
+
+list.pollFirst();
+//Printing the elements of list
+
+System.out.println(list);
+
+list.pollFirst();
+//Printing the elements of list
+
+System.out.println(list);
+
+list.removeFirst();
+//Printing the elements of list
+
+System.out.println(list);
+
+//Printing the elements of list
+
+System.out.println(list);
+
+//Removing elements from the end of the LinkedList
+
+list.pollLast();
+//Printing the elements of list
+
+System.out.println(list);
+
+list.removeLast();
+
+//Printing the elements of list
+
+System.out.println(list);
+}
+}
