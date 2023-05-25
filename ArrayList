@@ -1,0 +1,57 @@
+package org.data.structure;
+
+import java.util.ArrayList;
+class Person
+{
+private String name;
+private int age;
+public Person(String name, int age) {
+super();
+this.name = name;
+this.age = age;
+}
+public String getName() {
+return name;
+}
+public void setName(String name) {
+this.name = name;
+}
+public int getAge() {
+return age;
+}
+public void setAge(int age) {
+this.age = age;
+}
+@Override
+public String toString() {
+return "Person [name=" + name + ", age=" + age + "]";
+}
+
+
+}
+
+
+public class ArrayListEx {
+public static void main(String[] args) {
+ArrayList<Person> list = new ArrayList();
+list.add(new Person("Preeti",33));
+
+
+System.out.println(list);
+
+ArrayList<String> list1 = new ArrayList();
+list1.add("Preeti");
+list1.add("Neha");
+
+System.out.println(list1);
+System.out.println(list1.size());
+
+list1.remove(1);
+System.out.println(list1);
+}
+
+}
+//Integer -> int
+//Double -> double
+//Long -> long
+//String
