@@ -1,0 +1,70 @@
+package com.graph;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class BFSExample {
+//BFS -> graph -> vertices
+private int V;
+//private int adj[];
+private LinkedList<Integer> adj[];
+
+//create the graph
+// G(v,e)
+//parameterized constructor
+BFSExample(int v)
+{
+V = v;
+adj = new LinkedList[v];
+for(int i=0; i < v;++i)
+adj[i] = new LinkedList();
+}
+
+//algorithm
+// create a function
+void BFS(int n)
+{
+boolean visited[] = new boolean[V];
+LinkedList<Integer> queue = new LinkedList();
+
+visited[n] = true;
+queue.add(n);
+
+while(queue.size() != 0)
+{
+n =queue.poll();
+System.out.println(n + " ");
+
+Iterator<Integer> i = adj[n].listIterator();
+while(i.hasNext())
+{
+int num = i.next();
+if(!visited[num])
+{
+visited[num] =true;
+queue.add(num);
+}
+}
+}
+
+}
+//add edges
+void addEdge(int v,int v1)
+{
+adj[v].add(v1);
+}
+
+public static void main(String[] args) {
+BFSExample graph = new BFSExample(4);
+graph.addEdge(0, 1);
+graph.addEdge(0, 2);
+graph.addEdge(1, 2);
+graph.addEdge(2, 0);
+graph.addEdge(2, 3);
+graph.addEdge(3, 3);
+
+System.out.println("BFS");
+
+graph.BFS(2);
+}
+}
