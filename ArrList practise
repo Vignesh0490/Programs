@@ -1,0 +1,19 @@
+package practise;
+import java.util.*;
+
+public class ArrList {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> a1 = new ArrayList<>();
+		a1.add(101);
+		a1.add(103);
+		a1.add(456);
+		a1.add(56);
+		
+		System.out.println("List of the Arrays" + " " + a1);
+		a1.remove(3);
+		System.out.println("Removed array list" + " " +a1);
+
+	}
+
+}
