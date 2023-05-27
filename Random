@@ -1,0 +1,37 @@
+package practise;
+
+public class Random {
+
+	public static void main(String[] args) {
+		int min = 200;
+		int max = 400;
+		System.out.println("Random values between 200 and 400:");
+		double a = Math.random()*(max-min+1)+min;
+		System.out.println(a);
+		int b = (int)Math.random()*(max-min+1)+min;
+		System.out.println("Number in Integer" + " "+b);
+
+	}
+
+}
+
+package practise;
+import java.util.*;
+
+public class LeapYear {
+
+	public static void main(String[] args) {
+		int year;
+		System.out.println("Enter the year:");
+		Scanner sc = new Scanner(System.in);
+		year = sc.nextInt();
+		
+		
+		if(((year % 4==0) && (year % 100!=0)) || (year % 400 ==0))
+		System.out.println("Given year is a leap year");
+		else
+		System.out.println("Given year is not a leap year");
+
+	}
+
+}
