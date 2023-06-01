@@ -1,0 +1,45 @@
+package com.tree;
+//Binary tree
+// one root can have two childs and childs also can have two two childs only
+class Node
+{
+int key;
+Node left,right;
+
+Node(int item)
+{
+key = item;
+left= right = null;
+}
+}
+public class BinaryTreeEx {
+Node root;
+BinaryTreeEx(int key)
+{ root = new Node(key);
+//Node root= new Node(key);
+}
+BinaryTreeEx()
+{ root= null;
+//Node root= new Node(key);
+}
+
+public static void main(String[] args) {
+BinaryTreeEx tree = new BinaryTreeEx();
+tree.root = new Node(1);
+// 1
+// / \
+// null null
+
+tree.root.left = new Node(2);
+tree.root.right = new Node(3);
+
+// 1
+// / \
+// 2 3
+// / \ / \
+
+tree.root.left.left = new Node(4);
+tree.root.left.right = new Node(5);
+
+tree.root.right.left= new Node(6);
+tree.root.right.right = new Node(7);
