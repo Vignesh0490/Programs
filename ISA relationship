@@ -1,0 +1,24 @@
+package core_java;
+//Base class
+class Fruit{
+	private String fruitName;
+	//constructor
+	public void setFruitName(String fruitName) {
+	this.fruitName = fruitName;
+}
+	public String getfruitName() {
+		return this.fruitName + " is a fruit";
+	}
+}
+	
+//Derived class
+class Mango extends Fruit{
+public static class ISArelationship {
+	public static void main(String[] args) {
+		Fruit fr = new Fruit();
+		fr.setFruitName("Mango");
+		System.out.println(fr.getfruitName());
+
+	}
+
+}}
